@@ -1,12 +1,29 @@
+require('dotenv').config();
+
 const express= require('express');
 const cors= require('cors');
 
+const mongoDB= require('./connection');
+const staticAssessmentRoute= require('./routes/staticDashboard');
+const signin_upRoute= require('./routes/signin_up');
+
 const app=express();
+const port=process.env.PORT;
+const mongo_url=process.env.MONGO_URI;
+
+app.use(cors());
+app.use(express.json());
+app.use('/dashboard',staticAssessmentRoute);
+app.use('/signin_up',signin_upRoute);
 
 app.get('/',(req,res)=>{
-    res.send("under process...");
+    res.send("You choose wrong route '/' is not available till the project completion");
 });
 
-app.listen(8080,()=>{
+mongoDB(mongo_url)
+    .then(()=>{console.log("database working...")})
+    .catch((err)=>{console.log("error occurs")});
+
+app.listen(port,()=>{
     console.log("server is working...");
 });
