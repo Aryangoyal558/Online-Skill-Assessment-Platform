@@ -1,0 +1,234 @@
+/* =========================
+   Background
+========================= */
+
+.background-container {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 950px;
+  margin: auto;
+}
+
+/* =========================
+   Floating Logo
+========================= */
+
+.hero-image {
+  width: 140px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.25));
+  animation: float 4s ease-in-out infinite;
+}
+
+/* =========================
+   Main Title
+========================= */
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+}
+
+/* =========================
+   Online Skill
+========================= */
+
+.blue-text {
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e3a8a 40%,
+    #312e81 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow:
+    0 0 10px rgba(30, 58, 138, 0.25),
+    0 0 20px rgba(30, 58, 138, 0.15);
+
+  animation: blueGlow 4s ease-in-out infinite alternate;
+}
+
+/* =========================
+   Assessment Platform
+========================= */
+
+.purple-text {
+  background: linear-gradient(
+    135deg,
+    #312e81 0%,
+    #5b21b6 50%,
+    #7c3aed 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow:
+    0 0 10px rgba(124, 58, 237, 0.3),
+    0 0 25px rgba(124, 58, 237, 0.2);
+
+  animation: purpleGlow 4s ease-in-out infinite alternate;
+}
+
+/* =========================
+   Description
+========================= */
+
+.hero-description {
+  max-width: 750px;
+  margin: 0 auto 40px;
+  color: #cbd5e1;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   Futuristic Button
+========================= */
+
+.hero-btn {
+  padding: 16px 42px;
+  border-radius: 50px;
+  border: 1px solid rgba(124, 58, 237, 0.4);
+
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.25),
+    rgba(124, 58, 237, 0.25)
+  );
+
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: all 0.35s ease;
+
+  box-shadow:
+    0 0 20px rgba(30, 58, 138, 0.2),
+    0 0 40px rgba(124, 58, 237, 0.15);
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.4),
+    rgba(124, 58, 237, 0.45)
+  );
+
+  box-shadow:
+    0 0 25px rgba(30, 58, 138, 0.35),
+    0 0 50px rgba(124, 58, 237, 0.3),
+    0 0 70px rgba(124, 58, 237, 0.15);
+}
+
+/* =========================
+   Floating Animation
+========================= */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* =========================
+   Blue Glow Animation
+========================= */
+
+@keyframes blueGlow {
+  from {
+    filter: drop-shadow(0 0 5px rgba(30, 58, 138, 0.2));
+  }
+
+  to {
+    filter:
+      drop-shadow(0 0 10px rgba(30, 58, 138, 0.35))
+      drop-shadow(0 0 20px rgba(49, 46, 129, 0.2));
+  }
+}
+
+/* =========================
+   Purple Glow Animation
+========================= */
+
+@keyframes purpleGlow {
+  from {
+    filter: drop-shadow(0 0 5px rgba(124, 58, 237, 0.25));
+  }
+
+  to {
+    filter:
+      drop-shadow(0 0 12px rgba(124, 58, 237, 0.45))
+      drop-shadow(0 0 25px rgba(124, 58, 237, 0.25));
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .hero-image {
+    width: 100px;
+  }
+
+  .hero-btn {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}

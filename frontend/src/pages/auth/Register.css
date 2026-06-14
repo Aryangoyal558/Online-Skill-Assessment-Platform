@@ -1,0 +1,242 @@
+/* Background */
+
+.register-page {
+  min-height: 100vh;
+  background: #020617;
+  background-image:
+    radial-gradient(circle at top left,
+      rgba(59,130,246,0.18),
+      transparent 35%),
+    radial-gradient(circle at bottom right,
+      rgba(168,85,247,0.18),
+      transparent 35%);
+}
+
+/* Card */
+
+.register-card {
+  background: rgba(10, 15, 35, 0.95);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(80,120,255,0.3);
+  border-radius: 22px;
+
+  padding: 35px;
+
+  box-shadow:
+    0 0 20px rgba(59,130,246,0.5),
+    0 0 40px rgba(59,130,246,0.2);
+}
+
+/* Heading */
+
+.register-title {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.register-subtitle {
+  color: #9ca3af;
+  margin-bottom: 25px;
+}
+
+/* Labels */
+
+.form-label {
+  color: #e5e7eb;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Inputs */
+
+.form-control {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  color: white !important;
+  height: 50px;
+}
+
+.form-control::placeholder {
+  color: #9ca3af !important;
+}
+
+.form-control:focus {
+  background: rgba(255,255,255,0.06) !important;
+  color: white !important;
+
+  border-color: #3b82f6 !important;
+
+  box-shadow:
+    0 0 10px rgba(59,130,246,0.4) !important;
+}
+
+/* Role Buttons */
+
+.role-btn {
+  height: 45px;
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+
+  color: white !important;
+  font-weight: 500;
+}
+
+.role-btn:hover {
+  border-color: #3b82f6 !important;
+}
+
+.active-role {
+  background: linear-gradient(
+    90deg,
+    #2bbcff,
+    #5b5fff,
+    #9333ea
+  ) !important;
+
+  border: none !important;
+}
+
+/* Password Buttons */
+
+.input-group .btn {
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  background: rgba(255,255,255,0.04);
+}
+
+.input-group .btn:hover {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+/* Register Button */
+
+.btn-primary {
+  height: 52px;
+  border: none !important;
+
+  background: linear-gradient(
+    90deg,
+    #2bbcff,
+    #5b5fff,
+    #9333ea
+  ) !important;
+
+  color: white !important;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 20px rgba(91,95,255,0.8);
+}
+
+/* Divider */
+
+.divider {
+  position: relative;
+  text-align: center;
+  color: #9ca3af;
+  margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* Social Buttons */
+
+.social-btn {
+  height: 50px;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: #3b82f6;
+  color: white;
+}
+
+/* Checkbox */
+
+.form-check-input {
+  background-color: transparent;
+  border-color: rgba(255,255,255,0.3);
+}
+
+.form-check-input:checked {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.form-check-label {
+  color: #d1d5db;
+}
+
+/* Login Link */
+
+.login-link {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  color: #93c5fd;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 25px;
+  color: #9ca3af;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .register-card {
+    padding: 25px;
+  }
+
+  .register-title {
+    font-size: 1.8rem;
+  }
+
+  .role-btn {
+    font-size: 13px;
+  }
+}

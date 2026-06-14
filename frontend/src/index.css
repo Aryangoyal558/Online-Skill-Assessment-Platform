@@ -1,0 +1,144 @@
+/* Navbar Container */
+
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 14px 0;
+}
+
+/* Logo */
+
+.navbar-brand {
+  color: white !important;
+  letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+  color: #38bdf8 !important;
+}
+
+/* Nav Links */
+
+.nav-link {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #38bdf8 !important;
+}
+
+/* Active Feel */
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: -2px;
+
+  width: 0;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #9333ea
+  );
+
+  transition: 0.3s;
+}
+
+.nav-item:hover::after {
+  width: 70%;
+}
+
+/* Dropdown */
+
+.dropdown-menu {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  background: rgba(56,189,248,0.15);
+  color: #38bdf8;
+}
+
+/* Login Button */
+
+.login-btn {
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  border-radius: 30px;
+  padding: 8px 22px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #38bdf8;
+  color: white;
+}
+
+/* Get Started Button */
+
+.started-btn {
+  border: none;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #9333ea
+  );
+
+  color: white;
+  font-weight: 600;
+
+  border-radius: 30px;
+
+  padding: 8px 24px;
+
+  transition: 0.3s;
+}
+
+.started-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 20px rgba(56,189,248,0.5),
+    0 0 30px rgba(147,51,234,0.3);
+}
+
+/* Mobile */
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Mobile Dropdown Background */
