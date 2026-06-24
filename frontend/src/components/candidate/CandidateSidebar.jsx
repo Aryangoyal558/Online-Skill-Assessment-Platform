@@ -43,7 +43,7 @@ function CandidateSidebar() {
         <li className="mb-3">
           <Link
             className="text-white text-decoration-none"
-            to="/candidate/certificates"
+            to="/candidate/certificate"
           >
             Certificates
           </Link>
