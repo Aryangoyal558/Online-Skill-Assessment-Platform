@@ -1,0 +1,112 @@
+
+
+.course-badge {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #fff;
+  color: #7b3cff;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.title {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.description {
+  color: #cfcfd6;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.explore-btn {
+  background: linear-gradient(90deg, #ff2f92, #ff4d6d);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.testimonial-card {
+  position: relative;
+}
+
+.quote-icon {
+  width: 70px;
+  height: 70px;
+  background: #7b3cff;
+  color: white;
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+  z-index: 2;
+  position: relative;
+}
+
+.speech-box {
+  background: #070735;
+  padding: 55px 40px;
+  margin-top: -15px;
+  position: relative;
+}
+
+.speech-box::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  bottom: -20px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #070735;
+}
+
+.speech-box p {
+  color: white;
+  line-height: 2;
+  font-size: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.user-info img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.user-info h4 {
+  color: white;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.user-info span {
+  color: #9b9bb0;
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 42px;
+  }
+
+  .speech-box {
+    margin-bottom: 40px;
+  }
+}

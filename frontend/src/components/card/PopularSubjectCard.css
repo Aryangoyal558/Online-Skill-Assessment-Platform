@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+.subject-card {
+  position: relative;
+
+
+  text-align: center;
+  border-radius:25px;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(189, 44, 189, 0.1);
+
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.15),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.subject-card:hover {
+  box-shadow:
+    0 0 40px rgba(0, 255, 255, 0.4),
+    0 0 80px rgba(0, 255, 255, 0.2);
+}
+
+.glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #5d1164, transparent);
+  top: -70px;
+  right: -70px;
+  filter: blur(50px);
+  opacity: 0.5;
+}
+
+.subject-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 3px solid rgba(154, 24, 150, 0.5);
+
+  box-shadow: 0 0 25px rgba(232, 115, 230, 0.5);
+
+  margin-bottom: 20px;
+}
+
+.subject-card h2 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.subject-card p {
+  color: #d1d1d1;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.stars {
+  color: gold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.stars span {
+  color: white;
+  margin-left: 10px;
+}
+
+.subject-card button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #6b106e, #2a112c);
+
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.subject-card button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #00ffff;
+}

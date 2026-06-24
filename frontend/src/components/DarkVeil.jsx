@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
- function DarkVeil() {
+function DarkVeil() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -11,22 +11,20 @@ import { useEffect, useRef } from "react";
     let particles = [];
 
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = canvas.parentElement.offsetWidth;
+      canvas.height = canvas.parentElement.offsetHeight;
     };
 
     resize();
     window.addEventListener("resize", resize);
 
-    for (let i = 0; i < 120; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        size: Math.random() * 2 + 1,
-        speedX: (Math.random() - 0.5) * 0.8,
-        speedY: (Math.random() - 0.5) * 0.8,
-      });
-    }
+    particles = Array.from({ length: 120 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 2 + 1,
+      speedX: (Math.random() - 0.5) * 0.8,
+      speedY: (Math.random() - 0.5) * 0.8,
+    }));
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -59,13 +57,14 @@ import { useEffect, useRef } from "react";
     <canvas
       ref={canvasRef}
       style={{
-        position: "fixed",
-        inset: 0,
+        position: "absolute",
+        top: 0,
+        left: 0,
         width: "100%",
         height: "100%",
         zIndex: 0,
-        background:
-          "radial-gradient(circle at center, #0a0f1f 0%, #050814 100%)",
+          background:
+        "radial-gradient(circle at center, #0a0f1f 0%, #050814 100%)",
       }}
     />
   );

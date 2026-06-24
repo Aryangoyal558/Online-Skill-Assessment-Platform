@@ -1,53 +1,117 @@
-import TeamCard from "../components/TeamCard";
-// import member1 from "../assets/member1.jpg";
-// import member2 from "../assets/member2.jpg";
-// import member3 from "../assets/member3.jpg";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 
-function TeamSection() {
+import "swiper/css";
+import "swiper/css/navigation";
+import "./TeamSection.css";
+
+const teamMembers = [
+  {
+    name: "Ethan Brooks",
+    role: "Founder & CEO",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500",
+  },
+  {
+    name: "Anna Keller",
+    role: "Senior Software Engineer",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500",
+  },
+  {
+    name: "Michael Tan",
+    role: "Full-Stack Developer",
+    image:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500",
+  },
+  {
+    name: "Daniel Ruiz",
+    role: "DevOps Engineer",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500",
+  },
+  {
+    name: "Laura Jensen",
+    role: "Product & Operations",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500",
+  },
+  {
+    name: "John Smith",
+    role: "UI/UX Designer",
+    image:
+      "https://images.unsplash.com/photo-1504593811423-6dd665756598?w=500",
+  },
+];
+
+export default function TeamSection() {
   return (
-    <div className="container py-5">
-      <h2 className="team-section-title" style={ {
-         textAlign: "center",
-    marginBottom: "60px",
-    fontSize: "3rem",
-    fontWeight: "800",
-    letterSpacing: "1px",
-    color: "#ffffff",
-    textShadow:
-      "0 0 10px rgba(255,255,255,0.25), 0 0 20px rgba(124,58,237,0.25), 0 0 35px rgba(236,72,153,0.15)",
-      }}
-  >Meet Our Team</h2>
+    <section className="team-section">
+      <div className="container">
+        <div className="top-content">
+          <div>
+            <span className="sub-title">OUR PEOPLE</span>
 
-      <div className="row g-4 justify-content-center">
-        <div className="col-md-4">
-          <TeamCard
-            image=""
-            name="Arjun Mehta"
-            role="Full Stack Developer"
-            description="Designing and building scalable AI-powered web platforms with modern React, Node.js, and cloud architecture. Focused on performance"
-          />
+            <h2 className="title">
+              A team passionate about clean code
+              <br />
+              and <span className="gradient-text">solid architecture</span>
+            </h2>
+          </div>
+
+          <a href="/" className="career-link">
+            Career at CodeWorks
+          </a>
         </div>
 
-        <div className="col-md-4">
-          <TeamCard
-            image=""
-            name="Sneha Kapoor"
-            role="UI/UX Designer"
-            description="Crafting immersive digital experiences with neon-inspired interfaces, motion design systems, and user-first interaction patterns for next-gen applications."
-          />
-        </div>
+        <Swiper
+          modules={[Navigation]}
+          navigation={{
+            prevEl: ".custom-prev",
+            nextEl: ".custom-next",
+          }}
+          spaceBetween={30}
+          slidesPerView={5}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+            576: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            992: {
+              slidesPerView: 4,
+            },
+            1200: {
+              slidesPerView: 5,
+            },
+          }}
+        >
+          {teamMembers.map((member, index) => (
+            <SwiperSlide key={index}>
+              <div className="team-card bg-white pt-3 rounded-3">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="team-image"
+                />
 
-        <div className="col-md-4">
-          <TeamCard
-            image=""
-            name="Rohan Verma"
-            role="AI Engineer"
-            description="Building intelligent assessment systems powered by machine learning, natural language processing, and predictive analytics for smarter decision-making."
-          />
+                <h3>{member.name}</h3>
+                <p>{member.role}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className="slider-controls">
+          <button className="custom-prev">←</button>
+          <button className="custom-next">→</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
-
-export default TeamSection;
