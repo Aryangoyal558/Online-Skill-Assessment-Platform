@@ -41,6 +41,26 @@ function AppRoutes() {
       />
 
       <Route
+<<<<<<< HEAD
+=======
+        path="/admin/dashboard"
+        element={
+          <ProtectedRoute>
+            <AdminDashboard />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/examiner/dashboard"
+        element={
+          <ProtectedRoute>
+            <EmployerDashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+>>>>>>> eba8c54 (Include Model)
         path="/candidate/tests"
         element={
           <ProtectedRoute>
