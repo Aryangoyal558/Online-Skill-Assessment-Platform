@@ -19,7 +19,7 @@ const userSchema=new mongoose.Schema({
     },
     role:{
         type:String,
-        enum:['candidate','instructor','admin'],
+        enum:['candidate','examiner','admin'],
         default:'candidate'
     },
     isActive:{

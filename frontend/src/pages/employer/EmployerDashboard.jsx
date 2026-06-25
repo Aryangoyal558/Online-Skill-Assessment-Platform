@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import EmployerLayout from "../../layouts/EmployerLayout";
 import {
@@ -7,6 +8,7 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "./EmployerDashboard.css"
 
 function EmployerDashboard() {
   const [showForm, setShowForm] = useState(false);
@@ -38,6 +40,7 @@ function EmployerDashboard() {
             borderRadius: "20px",
             overflow: "hidden",
             background: "#fff",
+          
           }}
         >
           <div
@@ -52,202 +55,206 @@ function EmployerDashboard() {
 
           <div className="card-body p-4">
             <form onSubmit={handleSubmit}>
-              <div className="row g-4">
-                {/* Assessment Title */}
-                <div className="col-md-6">
-                  <label className="form-label fw-semibold text-dark">
-                    Assessment Title
-                  </label>
+  <div className="row g-4">
+    <div className="col-md-6">
+      <label className="form-label fw-semibold text-dark">
+        Assessment Title
+      </label>
 
-                  <input
-                    type="text"
-                    className="form-control rounded-3"
-                    placeholder="Java Developer Assessment"
-                    required
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#212529",
-                      padding: "12px",
-                    }}
-                  />
-                </div>
+      <input
+        type="text"
+        className="form-control rounded-3"
+        placeholder="Java Developer Assessment"
+        spellCheck={false}
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        required
+        style={{
+          backgroundColor: "#fff",
+          color: "#212529",
+          padding: "12px",
+        }}
+      />
+    </div>
 
-                {/* Subject */}
-                <div className="col-md-6">
-                  <label className="form-label fw-semibold text-dark">
-                    Subject
-                  </label>
+    <div className="col-md-6">
+      <label className="form-label fw-semibold text-dark">
+        Subject
+      </label>
 
-                  <select
-                    className="form-select rounded-3"
-                    required
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#212529",
-                      padding: "12px",
-                    }}
-                  >
-                    <option value="">Select Subject</option>
-                    <option>Java</option>
-                    <option>React JS</option>
-                    <option>Python</option>
-                    <option>SQL</option>
-                    <option>Aptitude</option>
-                    <option>JavaScript</option>
-                    <option>Data Structures</option>
-                  </select>
-                </div>
+      <select
+        className="form-select rounded-3"
+        required
+        style={{
+          backgroundColor: "#fff",
+          color: "#212529",
+          padding: "12px",
+        }}
+      >
+        <option value="">Select Subject</option>
+        <option>Java</option>
+        <option>React JS</option>
+        <option>Python</option>
+        <option>SQL</option>
+        <option>Aptitude</option>
+        <option>JavaScript</option>
+        <option>Data Structures</option>
+      </select>
+    </div>
 
-                {/* Duration */}
-                <div className="col-md-4">
-                  <label className="form-label fw-semibold text-dark">
-                    Duration (Minutes)
-                  </label>
+    <div className="col-md-4">
+      <label className="form-label fw-semibold text-dark">
+        Duration (Minutes)
+      </label>
 
-                  <input
-                    type="number"
-                    className="form-control rounded-3"
-                    placeholder="60"
-                    required
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#212529",
-                      padding: "12px",
-                    }}
-                  />
-                </div>
+      <input
+        type="number"
+        className="form-control rounded-3"
+        placeholder="60"
+        spellCheck={false}
+        required
+        style={{
+          backgroundColor: "#fff",
+          color: "#212529",
+          padding: "12px",
+        }}
+      />
+    </div>
 
-                {/* Total Marks */}
-                <div className="col-md-4">
-                  <label className="form-label fw-semibold text-dark">
-                    Total Marks
-                  </label>
+    <div className="col-md-4">
+      <label className="form-label fw-semibold text-dark">
+        Total Marks
+      </label>
 
-                  <input
-                    type="number"
-                    className="form-control rounded-3"
-                    placeholder="100"
-                    required
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#212529",
-                      padding: "12px",
-                    }}
-                  />
-                </div>
+      <input
+        type="number"
+        className="form-control rounded-3"
+        placeholder="100"
+        spellCheck={false}
+        required
+        style={{
+          backgroundColor: "#fff",
+          color: "#212529",
+          padding: "12px",
+        }}
+      />
+    </div>
 
-                {/* Passing Marks */}
-                <div className="col-md-4">
-                  <label className="form-label fw-semibold text-dark">
-                    Passing Marks
-                  </label>
+    <div className="col-md-4">
+      <label className="form-label fw-semibold text-dark">
+        Passing Marks
+      </label>
 
-                  <input
-                    type="number"
-                    className="form-control rounded-3"
-                    placeholder="40"
-                    required
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#212529",
-                      padding: "12px",
-                    }}
-                  />
-                </div>
+      <input
+        type="number"
+        className="form-control rounded-3"
+        placeholder="40"
+        spellCheck={false}
+        required
+        style={{
+          backgroundColor: "#fff",
+          color: "#212529",
+          padding: "12px",
+        }}
+      />
+    </div>
 
-                {/* Start Date */}
-                <div className="col-md-6">
-                  <label className="form-label fw-semibold text-dark">
-                    Start Date & Time
-                  </label>
+    <div className="col-md-6">
+      <label className="form-label fw-semibold text-dark">
+        Start Date & Time
+      </label>
 
-                  <input
-                    type="datetime-local"
-                    className="form-control rounded-3"
-                    required
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#212529",
-                      padding: "12px",
-                    }}
-                  />
-                </div>
+      <input
+        type="datetime-local"
+        className="form-control rounded-3"
+        required
+        style={{
+          backgroundColor: "#fff",
+          color: "#212529",
+          padding: "12px",
+        }}
+      />
+    </div>
 
-                {/* End Date */}
-                <div className="col-md-6">
-                  <label className="form-label fw-semibold text-dark">
-                    End Date & Time
-                  </label>
+    <div className="col-md-6">
+      <label className="form-label fw-semibold text-dark">
+        End Date & Time
+      </label>
 
-                  <input
-                    type="datetime-local"
-                    className="form-control rounded-3"
-                    required
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#212529",
-                      padding: "12px",
-                    }}
-                  />
-                </div>
+      <input
+        type="datetime-local"
+        className="form-control rounded-3"
+        required
+        style={{
+          backgroundColor: "#fff",
+          color: "#212529",
+          padding: "12px",
+        }}
+      />
+    </div>
 
-                {/* Upload File */}
-                <div className="col-12">
-                  <label className="form-label fw-semibold text-dark">
-                    Upload Question File
-                  </label>
+    <div className="col-12">
+      <label className="form-label fw-semibold text-dark">
+        Upload Question File
+      </label>
 
-                  <input
-                    type="file"
-                    className="form-control rounded-3"
-                    accept=".pdf,.doc,.docx,.xlsx,.csv"
-                    required
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#212529",
-                      padding: "12px",
-                    }}
-                  />
+      <input
+        type="file"
+        className="form-control rounded-3"
+        accept=".pdf,.doc,.docx,.xlsx,.csv"
+        required
+        style={{
+          backgroundColor: "#fff",
+          color: "#212529",
+          padding: "12px",
+        }}
+      />
 
-                  <small className="text-muted">
-                    Upload PDF, DOCX, Excel or CSV file.
-                  </small>
-                </div>
+      <small className="text-muted">
+        Upload PDF, DOCX, Excel or CSV file.
+      </small>
+    </div>
 
-                {/* Instructions */}
-                <div className="col-12">
-                  <label className="form-label fw-semibold text-dark">
-                    Instructions
-                  </label>
+    <div className="col-12">
+      <label className="form-label fw-semibold text-dark">
+        Instructions
+      </label>
 
-                  <textarea
-                    className="form-control rounded-3"
-                    rows="5"
-                    placeholder="Enter assessment instructions..."
-                    style={{
-                      backgroundColor: "#fff",
-                      color: "#212529",
-                      padding: "12px",
-                    }}
-                  ></textarea>
-                </div>
+      <textarea
+        className="form-control rounded-3"
+        rows="5"
+        placeholder="Enter assessment instructions..."
+        spellCheck={false}
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
+        style={{
+          backgroundColor: "#fff",
+          color: "#212529",
+          padding: "12px",
+        }}
+      />
+    </div>
 
-                {/* Buttons */}
-                <div className="col-12 d-flex flex-wrap gap-3">
-                  <button type="submit" className="btn btn-success px-4 py-2">
-                    Create Assessment
-                  </button>
+    <div className="col-12 d-flex flex-wrap gap-3">
+      <button
+        type="submit"
+        className="btn btn-success px-4 py-2"
+      >
+        Create Assessment
+      </button>
 
-                  <button
-                    type="button"
-                    className="btn btn-outline-secondary px-4 py-2"
-                    onClick={() => setShowForm(false)}
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            </form>
+      <button
+        type="button"
+        className="btn btn-outline-secondary px-4 py-2"
+        onClick={() => setShowForm(false)}
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</form>
           </div>
         </div>
       )}
@@ -315,55 +322,6 @@ function EmployerDashboard() {
         </div>
       </div>
 
-      {/* Recent Assessments */}
-      <div className="card border-0 shadow-sm mb-4">
-        <div className="card-header bg-white">
-          <h5 className="mb-0">Recent Assessments</h5>
-        </div>
-
-        <div className="card-body">
-          <table className="table table-hover">
-            <thead>
-              <tr>
-                <th>Assessment</th>
-                <th>Subject</th>
-                <th>Candidates</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td>React Developer Test</td>
-                <td>React JS</td>
-                <td>120</td>
-                <td>
-                  <span className="badge bg-success">Active</span>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Java Assessment</td>
-                <td>Java</td>
-                <td>95</td>
-                <td>
-                  <span className="badge bg-warning text-dark">Draft</span>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Python Screening</td>
-                <td>Python</td>
-                <td>210</td>
-                <td>
-                  <span className="badge bg-success">Active</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
       {/* Quick Actions */}
       <div className="card border-0 shadow-sm">
         <div className="card-header bg-white">
@@ -391,3 +349,4 @@ function EmployerDashboard() {
 }
 
 export default EmployerDashboard;
+

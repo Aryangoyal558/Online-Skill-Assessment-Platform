@@ -1,0 +1,21 @@
+.form-control,
+.form-select,
+textarea {
+  background: #fff !important;
+  color: #212529 !important;
+}
+
+.form-control::placeholder,
+textarea::placeholder {
+  color: #6b7280 !important;
+  opacity: 1;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+  background: #fff !important;
+  color: #212529 !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}

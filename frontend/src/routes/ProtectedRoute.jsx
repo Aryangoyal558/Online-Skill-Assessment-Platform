@@ -1,11 +1,8 @@
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-function ProtectedRoute({
-  children
-}) {
-
-  const { user } = useAuth();
+function ProtectedRoute({ children }) {
+  const user = document.cookie.includes("uid");
 
   if (!user) {
     return <Navigate to="/login" />;
